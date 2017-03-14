@@ -1,0 +1,83 @@
+<div id="yuanchu_detail" class="mui-content">
+    <ul class="mui-table-view yanchu_list yanchu_details_top" style="background-image: url({{product.product_picture}});">
+        <li class="mui-table-view-cell mui-media">
+            <img class="mui-media-object mui-pull-left yanchu_img" src="{{product.product_picture}}">
+            <div class="mui-media-body">
+                <h4 class="yanchu_top_name">{{product.play_name}}</h4>
+                <p class="mui-ellipsis">{{if product.start_time_ex != ''}}{{product.start_time_ex}}~{{/if}}{{product.product_end_time}}</p>
+                <p class="mui-ellipsis">{{product.play_address}}</p>
+            </div>
+        </li>
+    </ul>
+    <div class="bg_white">
+        <div id="segmentedControl" class="mui-segmented-control mui-segmented-control-inverted">
+            <a class="mui-control-item mui-active" href="#item1">快速购票</a>
+            <a class="mui-control-item" href="#item2">详情</a>
+        </div>
+    </div>
+    <div id="item1" class="mui-control-content mui-active">
+        <form id="yanchu_form" name="yanchu_form" onclick="return false">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell">选择时间</li>
+                <li class="mui-table-view-cell">
+                    <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted yanchu_time">
+                        <div class="mui-scroll">
+                            {{each iteminfo as time key}}
+                            <a class="time mui-control-item {{if key==0}}mui-active{{/if}}" data-key="{{key}}">
+                                <span>{{time.monthDay}}</span>
+                                <span>{{time.hours}} {{time.week}}</span>
+                                <input type="radio" name="time" id="time" {{if key==0}}checked{{/if}}
+                                       value="{{time.ticketTimeStr}}" style="display:none;"/>
+                            </a>
+                            {{/each}}
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="mui-table-view margin_top_10">
+                <li class="mui-table-view-cell">选择价格</li>
+                <li class="mui-table-view-cell">
+                    <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                        <div id="yanchu_time" class="mui-scroll yanchu_time">
+                            {{each iteminfo as time key}}
+                            {{if key==0}}
+                            {{each time.price as val k}}
+                            <a class="mui-control-item {{if val.price_starus !=1 || val.price_num == 0}}stock-off{{/if}}">
+                                <span>{{val.price_info}}点</span>                                
+                                <input type="radio" name="specid" value="{{val.product_playid}}" style="display:none;"/>
+                                <input type="radio" name="stock" value="{{if val.price_num > 10 || val.price_num < 1}}10{{else}}{{val.price_num}}{{/if}}" style="display:none;"/>
+                            </a>
+                            {{/each}}
+                            {{/if}}
+                            {{/each}}
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="mui-table-view margin_top_10">
+                <div class="mui-table-view-cell">
+                    <span class="vertical_align_sub">购买数量</span>
+                    <div class="mui-numbox mui-pull-right" data-numbox-min="1">
+                        <button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+                        <input id="number" class="mui-input-numbox" type="number" name="number"/>
+                        <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="color_ff781e" style="margin: 20px 5px;">
+            	<p class="color_ff781e">温馨提示：</p>
+            	<!--p class="color_ff781e">1、说明：预订单并不代表您一定能购成功购得此票品，请您在订单生成24小时内保持手机畅通，票品的有无以最终电话确认为准，感谢！</p>-->
+				<p class="color_ff781e">由于票务商品有有效时间及有限数量的特殊性质，一旦出票后，我们可能因客观原因，无法为您退、换票。（演出时间变更、内容变更除外）</p>
+				<!--<p class="color_ff781e">3、演出前3天仅支持上门自取，北京演出票自取地址：北京市东直门外大街东方银座A17C </p>-->
+			</div>
+            <input type="hidden" name="id" value="{{product.product_id}}"/>
+        </form>
+    </div>
+    <!--演唱会详情-->
+    <div id="item2" class="mui-control-content public_xiangqing_img">
+        <p>
+            {{#product.product_profile}}
+        </p>
+        <p></p>
+    </div>
+</div>

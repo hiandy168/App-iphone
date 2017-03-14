@@ -1,0 +1,55 @@
+<div class="mui-content">
+	<div id="slider" class="mui-slider">
+		<div class="mui-slider-group">
+			{{each data.product.Imgs as img}}
+			<div class="mui-slider-item">
+				<a href="#">
+					<img src="{{img}}" height="220"> 
+				</a>
+			</div>
+			{{/each}}
+		</div>
+		<div class="mui-slider-indicator">
+		{{each data.product.Imgs as img i}}
+			<div class="mui-indicator {{if i==0}} mui-active {{/if}}"></div>
+			{{/each}}	
+		</div>
+	</div>
+	<!--图片轮播 end-->
+	<div class="cake_details_title mui-row bg_white">
+		<div class="mui-col-xs-12">
+			<h4 class="color_ff781e">{{data.jingqu.SightName}}</h4>
+			<div class="ticket_color">类 型：<span>{{data.jingqu.SightBusinessCategory}}</span></div>
+			<div class="ticket_color">级 别：<span>{{data.jingqu.SupplierLevel}}</span></div>
+			<div class="ticket_color">地 址：<span>{{data.jingqu.SightAddress}}</span></div>
+		</div>
+	</div>
+	<!--景点列表-->
+	<ul class="mui-table-view margin_top_10" id="tab_a">
+		{{each data.product as item i}}
+		{{if i !='Imgs'}}
+	    <li class="mui-table-view-cell ticket_item">
+	    	<a href="javascript:;" class="mui-navigate-right mui-row">
+	    		<div class="ticket_kind mui-col-xs-8 mui-ellipsis">{{item.ProductName}}</div>
+	    		<div class="mui-col-xs-4"><span class="color_2fd0b5 mui-pull-right ticket_kind_price">{{item.SellPrice}}点</span></div>
+	    	</a>
+	    </li>
+	    {{/if}}
+	    {{/each}}
+	</ul>
+	<!--景点详情-->
+	<div class="ticket_details_box" id="tab_b">
+		{{each data.product as item i}}
+		{{if i!='Imgs'}}
+		<div class="ticket_details hide">
+			<div class="ticket_title">
+				<h4 class="mui-text-center color_ff781e">景点详情</h4>
+				<div><span style="color: #666;font-size: 12px;">{{item.ProductName}}</span> <span class="color_2fd0b5 mui-pull-right">售价：{{item.SellPrice}}点</span></div>
+			</div>
+			<div class="ticket_scroll">{{#item.FeeInclude}}</div>
+			<div class="ticket_btn href_click" data-href = "./ticket_submit.html?id={{item.KeyId}}">立即购买</div>
+		</div>
+		{{/if}}
+		{{/each}}
+	</div>	
+</div>

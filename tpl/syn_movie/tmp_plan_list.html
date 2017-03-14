@@ -1,0 +1,16 @@
+{{each plan as pv}}
+<div class="mui-row movie_list">
+    <div class="mui-col-xs-3 mui-text-center movie_time">{{pv.time}}</div>
+    <div class="mui-col-xs-4 movie_type">
+        <div>{{pv.language}}{{pv.screen_type}}</div>
+        <p>{{pv.hall_name}}</p>
+        </div><div class="mui-col-xs-2 mui-text-center movie_price">{{pv.price}}</div>
+    <div class="mui-col-xs-3 mui-text-center">
+        {{if pv.is_cut==1}}
+        <button class="btn_ticket btn_ticket_no" type="button">已过场</button>
+        {{else}}
+        <button class="btn_ticket href_click" data-href="./movie_seat.html?scheduleid={{pv.id}}" type="button">选座购票</button>
+        {{/if}}
+    </div>
+</div>
+{{/each}}

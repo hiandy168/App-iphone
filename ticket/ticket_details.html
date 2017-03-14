@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/public.css" rel="stylesheet"/>
+		<link href="../css/mui.mian.css" rel="stylesheet"/>
+		<link href="../css/iconfont.css" rel="stylesheet"/>
+		<script src="../js/connection.js"></script>
+		<script src="../js/jquery-1.9.1.min.js"></script>
+		<script src="../js/mui.min.js"></script>	
+		<script src="http://www.juyoufuli.com/tmodApp/template.js"></script>
+		<script src="../js/jqueryExtend.js"></script>
+		<script src="../js/mui.mian.js"></script>
+		<style>
+			.ticket_color{color: #666;font-size: 12px;}		
+			.ticket_kind{font-size: 12px;}
+			.ticket_kind_price{margin-right: 20px;}
+			.ticket_details_box{position: relative;}
+			.ticket_details{padding: 10px 10px 280px 10px;width: 100%;height: 100%;position:fixed;top:150px;background: white;z-index: 999;}
+			.ticket_scroll{height: 100%;overflow-y: scroll}
+			.ticket_details *{width: 100%!important;}
+			.ticket_details p{text-align:left;}
+			.ticket_details p img{text-align: center!important;}
+			.hide{display: none;}
+			.ticket_close{position: fixed;top: 165px;right: 10px;width: auto;font-size: 18px;z-index: 1111;}
+			.mui-backdrop {
+			    background-color: rgba(0,0,0,.8);
+			}
+			.ticket_btn{background: #2fd0b5;position: fixed;bottom: 0;width: 100%;text-align: center;left: 0;color: white;padding: 10px;letter-spacing: 2px;}
+			.ticket_title{margin-bottom: 10px;overflow: hidden;}
+		</style>
+		<script>
+			// 商品id
+			var goods_id = jQuery.getUrlParam('KeyId'); 
+		</script>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">商品详情</h1>
+		</header>		
+		<script type="text/javascript">
+			mui.init();
+			// ajax调取数据
+			jQuery.ajaxJsonp(web_url+"/mobile/piaoduoduo_list.php",{KeyId:goods_id},function(result){
+				if(result.state == 'false'){
+					jQuery.errorJudge(result.state,result.message,function(){
+						mui.back();	
+					});					
+				}
+				// 加载页面			
+				replaceHtml('header', template('ticket/ticket_details', result));
+				console.log(result);
+				// 从新触发相册插件
+				var gallery = mui('.mui-slider');
+				gallery.slider();
+			},true);
+			jQuery.hrefClick();
+			//景区种类点击详情
+				mui("body").on("tap","#tab_a li",function(){
+				var mask = mui.createMask(function(){
+					$('#tab_b .ticket_details').eq(index).hide();
+				});
+				mask.show();
+			    var index = $("#tab_a li").index(this);
+			    $('#tab_b .ticket_details').eq(index).show().siblings().hide();
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,11 @@
+{{each data.cinemas as cinema}}
+		<li class="mui-table-view-cell href_click" data-href="./cinema_details.html?cinemaid={{cinema.cinemaId}}&movieid={{data.movieId}}">
+			<h4>{{cinema.cinemaName}}</h4>
+			<p style="width: 80%;">{{cinema.cinemaAddress}}</p>
+			<div>
+				<div class="cinema_type f_l"><i class="type_zuo"></i>{{if ticketType==1}}<i class="type_quan"></i>{{/if}}<!--<i class="type_ka"></i>--></div>
+				<!--<div class="cinema_price color_ff781e f_l">￥<span>33</span>起</div>-->
+			</div>
+			{{if cinema.distance_cn}}<p class="cinema_distance color_ff781e">{{cinema.distance_cn}}</p>{{/if}}
+		</li>
+{{/each}}

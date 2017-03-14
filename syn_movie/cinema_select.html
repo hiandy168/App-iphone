@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/mui.min.css"/>
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<style>
+			.cinema_type{margin-right: 10px;}
+			.type_quan{}
+			.type_ka{}
+			.cinema_list li{position: relative;}
+			.cinema_distance{position: absolute;top: 50%;right: 15px;transform: translateY(-50%);-webkit-transform: translateY(-50%);font-size: 14px;}
+			.icon-loudou01{font-size: 16px!important;color: white;padding-top: 15px!important;}
+			.select_area{position: absolute;width: 100%;top: 65px;z-index: 999;background: #f2f2f2;height:240px;}
+			.select_area .mui-col-xs-3{padding:11px 15px}
+			.area_ul{overflow-y: scroll;height: 240px;}
+			.area_ul:after{height: 0;}
+			.mui-bar-nav ~ .mui-content .mui-pull-top-pocket{
+			  top: 60px !important;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">选择影院</h1>
+		    <a class="mui-icon iconfont icon-loudou01 mui-pull-right"></a>
+		</header>
+		<div class="mui-content mui-scroll-wrapper" id="pullrefresh">
+			<div class="mui-scroll">
+				<ul class="mui-table-view cinema_list"></ul>
+			</div>
+		</div>
+		<div class="select_area mui-row" style="display: none;">
+				<div class="mui-col-xs-3 bg_white">城区</div>
+				<div class="mui-col-xs-9">
+					<ul class="mui-table-view area_ul">
+						<li class="mui-table-view-cell area_list">全部</li>
+					</ul>
+				</div>
+		</div>
+		<script src="../js/connection.js"></script>
+		<script src="../js/jquery-1.9.1.min.js"></script>
+		<script src="../js/jqueryExtend.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<!--<script src="http://www.juyoufuli.com/tmodApp/template.js"></script>-->
+		<script src="../js/template.js"></script>
+		<script src="../js/mui.mian.js"></script>
+		<script>
+			var movieid = jQuery.getUrlParam("movieid");
+			var page;
+			var area_id;
+			var lat;
+			var lon;
+			jQuery.hrefClick();
+			mui.init({
+					  pullRefresh : {
+					    container:"#pullrefresh",//待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+					    up : {
+					      height:50,//可选.默认50.触发上拉加载拖动距离
+					      auto:false,//可选,默认false.自动上拉加载一次
+					      contentrefresh : "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
+					      contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
+					      callback :pullupRefresh //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+					    },
+					    down : {
+					      height:50,//可选,默认50.触发下拉刷新拖动距离,
+					      contentdown : "下拉可以刷新",//可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+					      contentover : "释放立即刷新",//可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
+					      contentrefresh : "正在刷新...",//可选，正在刷新状态时，下拉刷新控件上显示的标题内容
+					      callback :pulldownRefresh //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+					    }
+					  }
+					});
+			/**
+			 * 上拉加载具体业务实现
+			 */
+			function pullupRefresh() {
+						setTimeout(function() {
+							jQuery.ajaxJsonp(api_url+"syn_cinema.php?step=movieCinema",{movieid:movieid,page:page,lat:lat,lon:lon,districtid:area_id},function(result){
+								if(result.state=='true') {
+									showArea(result.data.districts);
+									page=result.data.page;
+									jQuery('.cinema_list').append(template('syn_movie/cinema_select',result));
+									page++;
+								}
+									mui('#pullrefresh').pullRefresh().endPullupToRefresh((jQuery.isEmptyObject(result.data.cinemas)));
+								
+							});
+						}, 1500);
+			}
+			//下拉刷新逻辑
+			function pulldownRefresh (){
+				page =1;
+				jQuery.ajaxJsonp(api_url+"syn_cinema.php?step=movieCinema",{movieid:movieid,lat:lat,lon:lon,districtid:area_id},function(result){
+								if(result.state=='true') {
+									showArea(result.data.districts);
+									page++;
+									jQuery('.cinema_list').html(template('syn_movie/cinema_select',result));
+								}
+								mui("#pullrefresh").pullRefresh().endPulldownToRefresh(); //refresh completed
+								mui('#pullrefresh').pullRefresh().refresh(true);
+						})
+			}
+			if (mui.os.plus) {
+				mui.plusReady(function() {
+					plus.geolocation.getCurrentPosition( function ( p ) {
+						 lat=p.coords.latitude;
+						 lon=p.coords.longitude;
+						}, function ( e ) {
+						alert( "Geolocation error: " + e.message);
+					} );
+					setTimeout(function() {
+						mui('#pullrefresh').pullRefresh().pullupLoading();
+					}, 1000);
+				});
+			} else {
+				mui.ready(function() {
+					mui('#pullrefresh').pullRefresh().pullupLoading();
+				});
+			}	
+//			区域渲染
+			function showArea(area_list){
+				var area_html = '';
+				jQuery.each(area_list,function(key,area){
+					area_html += '<li class="mui-table-view-cell area_a" data-area-id='+area.id+'>'+area.name+'</li>';
+				});
+				jQuery('.area_list').after(area_html);
+			}
+			var mask = mui.createMask(closeArea);
+			mui("body").on("tap",".icon-loudou01",function(){
+				jQuery(".select_area").fadeToggle();
+				if(jQuery(".select_area").is(":hidden")){
+					mask.close();
+				}else{
+				mask.show();
+				}
+			})
+			function closeArea(){
+				jQuery(".select_area").fadeToggle();
+			}
+			mui("body").on("tap",".area_a",function(){
+				jQuery(".select_area").fadeIn();
+				mask.close();
+				page=1;
+				area_id=this.getAttribute('data-area-id');
+				jQuery.ajaxJsonp(api_url+"syn_cinema.php?step=movieCinema",{movieid:movieid,districtid:area_id,lat:lat,lon:lon,page:page},function(result){
+								if(result.state=='true') {
+									page++;
+									jQuery('.cinema_list').html(template('syn_movie/cinema_select',result));
+									mui('#pullrefresh').pullRefresh().refresh(true);
+								}
+						},true)
+				})
+			
+		</script>
+	</body>
+</html>

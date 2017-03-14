@@ -1,0 +1,28 @@
+<nav class="mui-bar mui-bar-tab movie_details_btn href_click" data-href="./cinema_select.html?movieid={{data.movieDetail.id}}">选座购票</nav>
+<div id="movie_detail" class="mui-content ">
+	<div class="mui-table-view-cell mui-media movie_details_top">
+		<img class="mui-media-object mui-pull-left" src="{{data.movieDetail.path_vertical_s}}">
+		<div class="mui-media-body">
+			<h4>{{data.movieDetail.movie_name}}</h4>
+				<p>导演：<span>{{data.movieDetail.director}}</span></p>
+				<p class="mui-ellipsis">主演：<span>{{data.movieDetail.actor}}</span></p>
+				<p class="mui-ellipsis">{{data.movieDetail.movie_type}}|<span>{{data.movieDetail.movie_length}}</span></p>
+				<p>{{data.movieDetail.publish_time}}</p>
+				<div class="star_pinfen">
+					<span class="star_pinfen1"></span>
+				</div>
+			    <span class="star_pinfenNum">{{data.movieDetail.score}}</span>
+		</div>
+	</div>
+			<!--影片详情 start-->
+	<div>
+		<p class="movie_xianqing">
+		{{data.movieDetail.intro}}
+		</p>
+	</div>	
+			<!--影片详情 end-->
+</div>
+<script>
+	jQuery('.movie_details_top').css('background-image','url('+jQuery('.movie_details_top img').attr('src')+')');
+	jQuery('.star_pinfen1').css('width',parseInt({{data.movieDetail.score}})*10+'%');
+</script>
