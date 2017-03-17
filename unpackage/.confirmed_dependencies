@@ -1,208 +1,308 @@
 {
-  "index.html": {
-    "resources": [
-      "images/jy_index/logo_tongka.png",
-      "js/jquery.min.js",
-      "images/jy_index/tongka.jpg",
-      "images/jy_index/sport.jpg",
-      "images/jy_index/birth.jpg",
-      "css/public.css",
-      "images/jy_index/logo_yundong.png",
-      "js/rem.js",
-      "images/jy_index/enjoy.png",
-      "images/jy_index/logo_wenhua.png",
-      "js/connection.js",
-      "images/jy_index/login_bg.jpg",
-      "images/jy_index/logo_shengri.png",
-      "css/new_href.css",
-      "images/jy_index/shenghuo.jpg",
-      "images/jy_index/login_shenghuo.png",
-      "js/mui.min.js",
-      "css/jy_index.css",
-      "css/mui.min.css",
-      "js/update.js",
-      "images/jy_index/wenhua.jpg",
-      "js/jqueryExtend.js",
-      "js/mui.view.js",
-      "images/jy_index/login_form.png"
-    ],
-    "refer": [
-      "index/jy_index.html"
-    ]
-  },
-  "index/jy_index.html": {
-    "resources": [
-      "images/icon/nav/nav-4.svg",
-      "images/chongzhi.svg",
-      "fonts/mui.ttf",
-      "images/icon/nav/nav-14.svg",
-      "images/icon/nav/nav-34.svg",
-      "js/mui.mian.js",
-      "images/icon/nav/nav-16.svg",
-      "images/hebing.svg",
-      "css/index.css",
-      "images/icon/nav/nav-15.svg",
-      "images/icon/nav/nav-11.svg",
-      "css/mui.mian.css",
-      "images/safe.svg",
-      "js/jquery-1.9.1.min.js",
-      "images/icon/nav/nav-13.svg",
-      "css/iconfont.css",
-      "images/person_message.svg",
-      "images/public_footer_icon.png",
-      "images/icon/nav/nav-40.svg",
-      "images/icon/nav/nav-10.svg",
-      "fonts/iconfont.ttf",
-      "images/shouhuo.svg",
-      "js/template.js",
-      "images/icon/nav/nav-17.svg",
-      "images/icon/nav/popUp_close.svg",
-      "images/icon/nav/nav-12.svg",
-      "images/icon/nav/nav-31.svg",
-      "images/icon/nav/nav-42.svg",
-      "images/icon/nav/nav-30.svg"
-    ],
-    "refer": [
-      "personal/person.html",
-      "index.html",
-      "order/my_order.html",
-      "yanchu/index.html",
-      "cake/index.html",
-      "movie/movie.html"
-    ]
-  },
-  "personal/person.html": {
-    "resources": [
-      "js/mui.picker.min.js.js",
-      "css/mui-picker.min.css"
-    ]
-  },
-  "order/my_order.html": {
-    "refer": [
-      "index/jy_index.html"
-    ]
-  },
-  "yanchu/index.html": {
-    "resources": [
-      "js/mui.mian.js",
-      "js/connection.js",
-      "js/mui.min.js",
-      "js/jquery-1.9.1.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "css/public.css",
-      "js/mui.hrefclick.js",
-      "js/template.js",
-      "js/jqueryExtend.js"
-    ]
-  },
-  "cake/index.html": {
-    "resources": [
-      "images/icon/nav/nav-14.svg",
-      "css/public.css",
-      "js/mui.mian.js",
-      "js/connection.js",
-      "css/index.css",
-      "images/icon/nav/nav-11.svg",
-      "js/mui.min.js",
-      "images/safe.svg",
-      "css/iconfont.css",
-      "images/person_message.svg",
-      "fonts/iconfont.ttf",
-      "images/icon/nav/nav-40.svg",
-      "images/icon/nav/nav-10.svg",
-      "js/template.js",
-      "images/icon/nav/nav-17.svg",
-      "images/icon/nav/popUp_close.svg",
-      "images/icon/nav/nav-12.svg",
-      "images/icon/nav/nav-4.svg",
-      "images/chongzhi.svg",
-      "fonts/mui.ttf",
-      "images/icon/nav/nav-34.svg",
-      "js/rem.js",
-      "images/icon/nav/nav-16.svg",
-      "images/hebing.svg",
-      "images/icon/nav/nav-15.svg",
-      "css/mui.mian.css",
-      "images/icon/nav/nav-31.svg",
-      "js/jquery-1.9.1.min.js",
-      "images/icon/nav/nav-13.svg",
-      "images/public_footer_icon.png",
-      "css/mui.min.css",
-      "images/shouhuo.svg",
-      "js/jqueryExtend.js",
-      "images/icon/cake/nav-20.png",
-      "images/icon/cake/nav-19.png"
-    ],
-    "refer": [
-      "cake/list.html",
-      "cake/details.html"
-    ]
-  },
-  "cake/list.html": {
-    "resources": [
-      "fonts/mui.ttf",
-      "css/public.css",
-      "js/jquery.common.js",
-      "js/rem.js",
-      "js/connection.js",
-      "js/mui.mian.js",
-      "css/mui.mian.css",
-      "js/mui.min.js",
-      "js/jquery-1.9.1.min.js",
-      "css/iconfont.css",
-      "css/mui.min.css",
-      "js/template.js",
-      "js/jqueryExtend.js",
-      "fonts/iconfont.ttf"
-    ]
-  },
-  "cake/details.html": {
-    "resources": [
-      "js/fly.js",
-      "js/jquery.common.js"
-    ]
-  },
-  "movie/movie.html": {
-    "resources": [
-      "images/star1.svg",
-      "images/star.svg"
-    ],
-    "refer": [
-      "movie/movie_details.html"
-    ]
-  },
-  "movie/movie_details.html": {
-    "refer": [
-      "movie/cinema_select.html"
-    ],
-    "resources": [
-      "images/star1.svg",
-      "js/mui.mian.js",
-      "js/connection.js",
-      "js/mui.min.js",
-      "images/star.svg",
-      "js/jquery-1.9.1.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "css/public.css",
-      "js/template.js",
-      "js/jqueryExtend.js"
-    ]
-  },
-  "movie/cinema_select.html": {
-    "resources": [
-      "js/mui.mian.js",
-      "js/connection.js",
-      "js/mui.min.js",
-      "js/jquery-1.9.1.min.js",
-      "fonts/mui.ttf",
-      "css/iconfont.css",
-      "css/mui.min.css",
-      "fonts/iconfont.ttf",
-      "css/public.css",
-      "js/template.js",
-      "js/jqueryExtend.js"
-    ]
-  }
+	"index.html": {
+		"resources": [
+			"images/jy_index/logo_tongka.png",
+			"js/jquery.min.js",
+			"images/jy_index/tongka.jpg",
+			"images/jy_index/sport.jpg",
+			"images/jy_index/birth.jpg",
+			"css/public.css",
+			"images/jy_index/logo_yundong.png",
+			"js/rem.js",
+			"images/jy_index/enjoy.png",
+			"images/jy_index/logo_wenhua.png",
+			"js/connection.js",
+			"images/jy_index/login_bg.jpg",
+			"images/jy_index/logo_shengri.png",
+			"css/new_href.css",
+			"images/jy_index/shenghuo.jpg",
+			"images/jy_index/login_shenghuo.png",
+			"js/mui.min.js",
+			"css/jy_index.css",
+			"css/mui.min.css",
+			"js/update.js",
+			"images/jy_index/wenhua.jpg",
+			"js/jqueryExtend.js",
+			"js/mui.view.js",
+			"images/jy_index/login_form.png"
+		],
+		"refer": [
+			"index/jy_index.html",
+			"login-culture.html"
+		]
+	},
+	"index/jy_index.html": {
+		"resources": [
+			"images/icon/nav/nav-4.svg",
+			"images/chongzhi.svg",
+			"fonts/mui.ttf",
+			"images/icon/nav/nav-14.svg",
+			"images/icon/nav/nav-34.svg",
+			"js/mui.mian.js",
+			"images/icon/nav/nav-16.svg",
+			"images/hebing.svg",
+			"css/index.css",
+			"images/icon/nav/nav-15.svg",
+			"images/icon/nav/nav-11.svg",
+			"css/mui.mian.css",
+			"images/safe.svg",
+			"js/jquery-1.9.1.min.js",
+			"images/icon/nav/nav-13.svg",
+			"css/iconfont.css",
+			"images/person_message.svg",
+			"images/public_footer_icon.png",
+			"images/icon/nav/nav-40.svg",
+			"images/icon/nav/nav-10.svg",
+			"fonts/iconfont.ttf",
+			"images/shouhuo.svg",
+			"js/template.js",
+			"images/icon/nav/nav-17.svg",
+			"images/icon/nav/popUp_close.svg",
+			"images/icon/nav/nav-12.svg",
+			"images/icon/nav/nav-31.svg",
+			"images/icon/nav/nav-42.svg",
+			"images/icon/nav/nav-30.svg",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/public.css",
+			"images/icon/nav/nav-33.svg",
+			"images/icon/nav/nav-43.svg",
+			"images/icon/nav/nav-48.svg"
+		],
+		"refer": [
+			"personal/person.html",
+			"index.html",
+			"order/my_order.html",
+			"yanchu/index.html",
+			"cake/index.html",
+			"movie/movie.html",
+			"syn_movie/movie.html",
+			"cake/list.html"
+		]
+	},
+	"personal/person.html": {
+		"resources": [
+			"js/mui.picker.min.js.js",
+			"css/mui-picker.min.css"
+		]
+	},
+	"order/my_order.html": {
+		"refer": [
+			"index/jy_index.html"
+		]
+	},
+	"yanchu/index.html": {
+		"resources": [
+			"js/mui.mian.js",
+			"js/connection.js",
+			"js/mui.min.js",
+			"js/jquery-1.9.1.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/public.css",
+			"js/mui.hrefclick.js",
+			"js/template.js",
+			"js/jqueryExtend.js"
+		]
+	},
+	"cake/index.html": {
+		"resources": [
+			"images/icon/nav/nav-14.svg",
+			"css/public.css",
+			"js/mui.mian.js",
+			"js/connection.js",
+			"css/index.css",
+			"images/icon/nav/nav-11.svg",
+			"js/mui.min.js",
+			"images/safe.svg",
+			"css/iconfont.css",
+			"images/person_message.svg",
+			"fonts/iconfont.ttf",
+			"images/icon/nav/nav-40.svg",
+			"images/icon/nav/nav-10.svg",
+			"js/template.js",
+			"images/icon/nav/nav-17.svg",
+			"images/icon/nav/popUp_close.svg",
+			"images/icon/nav/nav-12.svg",
+			"images/icon/nav/nav-4.svg",
+			"images/chongzhi.svg",
+			"fonts/mui.ttf",
+			"images/icon/nav/nav-34.svg",
+			"js/rem.js",
+			"images/icon/nav/nav-16.svg",
+			"images/hebing.svg",
+			"images/icon/nav/nav-15.svg",
+			"css/mui.mian.css",
+			"images/icon/nav/nav-31.svg",
+			"js/jquery-1.9.1.min.js",
+			"images/icon/nav/nav-13.svg",
+			"images/public_footer_icon.png",
+			"css/mui.min.css",
+			"images/shouhuo.svg",
+			"js/jqueryExtend.js",
+			"images/icon/cake/nav-20.png",
+			"images/icon/cake/nav-19.png",
+			"images/icon/nav/nav-43.svg",
+			"images/icon/nav/nav-33.svg",
+			"images/icon/nav/nav-48.svg",
+			"images/icon/nav/nav-30.svg"
+		],
+		"refer": [
+			"cake/list.html",
+			"cake/details.html"
+		]
+	},
+	"cake/list.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"css/public.css",
+			"js/jquery.common.js",
+			"js/rem.js",
+			"js/connection.js",
+			"js/mui.mian.js",
+			"css/mui.mian.css",
+			"js/mui.min.js",
+			"js/jquery-1.9.1.min.js",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"js/template.js",
+			"js/jqueryExtend.js",
+			"fonts/iconfont.ttf"
+		],
+		"refer": [
+			"cake/details.html"
+		]
+	},
+	"cake/details.html": {
+		"resources": [
+			"js/fly.js",
+			"js/jquery.common.js",
+			"js/mui.mian.js",
+			"js/connection.js",
+			"css/mui.mian.css",
+			"js/mui.min.js",
+			"js/jquery-1.9.1.min.js",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"css/public.css",
+			"js/jqueryExtend.js",
+			"fonts/mui.ttf",
+			"fonts/iconfont.ttf"
+		],
+		"refer": [
+			"flow/checkout.html"
+		]
+	},
+	"movie/movie.html": {
+		"resources": [
+			"images/star1.svg",
+			"images/star.svg",
+			"css/mui.min.css",
+			"css/public.css"
+		],
+		"refer": [
+			"movie/movie_details.html"
+		]
+	},
+	"movie/movie_details.html": {
+		"refer": [
+			"movie/cinema_select.html"
+		],
+		"resources": [
+			"images/star1.svg",
+			"js/mui.mian.js",
+			"js/connection.js",
+			"js/mui.min.js",
+			"images/star.svg",
+			"js/jquery-1.9.1.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/public.css",
+			"js/template.js",
+			"js/jqueryExtend.js"
+		]
+	},
+	"movie/cinema_select.html": {
+		"resources": [
+			"js/mui.mian.js",
+			"js/connection.js",
+			"js/mui.min.js",
+			"js/jquery-1.9.1.min.js",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"fonts/iconfont.ttf",
+			"css/public.css",
+			"js/template.js",
+			"js/jqueryExtend.js"
+		]
+	},
+	"login-culture.html": {
+		"resources": [
+			"images/jy_index/top-logo.png",
+			"js/jquery-1.9.1.min.js",
+			"fonts/mui.ttf",
+			"css/jy_index.css",
+			"css/mui.min.css",
+			"css/public.css",
+			"images/jy_index/bg-wh.jpg"
+		],
+		"refer": [
+			"index/jy_index.html"
+		]
+	},
+	"syn_movie/movie_details.html": {
+		"resources": [
+			"js/mui.mian.js",
+			"js/connection.js",
+			"js/mui.min.js",
+			"js/jquery-1.9.1.min.js",
+			"css/mui.min.css",
+			"css/public.css",
+			"js/template.js",
+			"js/jqueryExtend.js"
+		],
+		"refer": [
+			"syn_movie/cinema_select.html"
+		]
+	},
+	"syn_movie/cinema_select.html": {
+		"resources": [
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"css/public.css"
+		]
+	},
+	"syn_movie/movie.html": {
+		"resources": [
+			"images/star1.svg",
+			"js/connection.js",
+			"js/mui.min.js",
+			"images/star.svg",
+			"js/jquery-1.9.1.min.js",
+			"css/mui.min.css",
+			"css/public.css",
+			"js/jqueryExtend.js"
+		],
+		"refer": [
+			"syn_movie/movie_details.html"
+		]
+	},
+	"flow/checkout.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"js/mui.picker.min.js.js",
+			"css/public.css",
+			"js/jquery.common.js",
+			"css/mui-picker.min.css",
+			"js/connection.js",
+			"js/mui.mian.js",
+			"css/mui.mian.css",
+			"js/mui.min.js",
+			"js/baidumap.js",
+			"js/jquery-1.9.1.min.js",
+			"css/mui.min.css",
+			"js/jqueryExtend.js"
+		]
+	}
 }
