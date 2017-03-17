@@ -9,9 +9,6 @@
 		<link rel="stylesheet" href="../css/iconfont.css" />
 		<style>
 			.cinema_type{margin-right: 10px;}
-			.type_zuo{background: ;}
-			.type_quan{}
-			.type_ka{}
 			.cinema_list li{position: relative;}
 			.cinema_distance{position: absolute;top: 50%;right: 15px;transform: translateY(-50%);-webkit-transform: translateY(-50%);font-size: 14px;}
 			.icon-loudou01{font-size: 16px!important;color: white;padding-top: 15px!important;}
@@ -129,7 +126,7 @@
 				jQuery.each(area_list,function(key,area){
 					area_html += '<li class="mui-table-view-cell area_a" data-area-id='+area.id+'>'+area.name+'</li>';
 				});
-				jQuery('.area_list').after(area_html);
+				jQuery('.area_list').html(area_html);
 			}
 			var mask = mui.createMask(closeArea);
 			mui("body").on("tap",".icon-loudou01",function(){

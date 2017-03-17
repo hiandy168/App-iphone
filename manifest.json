@@ -17,7 +17,7 @@
 	"developer": {
 		"name": "",/*开发者名称*/
 		"email": "",/*开发者邮箱地址*/
-		"url": "http://www.dcloud.io"
+		"url": ""
 	},
 	"permissions": {
 		"Accelerometer": {
@@ -212,7 +212,7 @@
 					"ldpi": "unpackage/res/icons/48x48.png", /*大屏程序图标，分辨率：48x48*/
 					"hdpi": "unpackage/res/icons/72x72.png", /*高分屏程序图标，分辨率：72x72*/
 					"xhdpi": "unpackage/res/icons/96x96.png",/*720P高分屏程序图标，分辨率：96x96*/
-					"xxhdpi": "unpackage/res/icons/144x144.png"
+					"xxhdpi": "unpackage/res/icons/144x144.png","xxxhdpi":"unpackage/res/icons/192x192.png"
 				}
 			},
 			"splashscreen": {
@@ -262,7 +262,8 @@
 					"images/jy_index/login_form.png"
 				],
 				"refer": [
-					"index/jy_index.html"
+					"index/jy_index.html",
+					"login-culture.html"
 				],
 				"priority": 0
 			},
@@ -296,7 +297,13 @@
 					"images/icon/nav/nav-12.svg",
 					"images/icon/nav/nav-31.svg",
 					"images/icon/nav/nav-42.svg",
-					"images/icon/nav/nav-30.svg"
+					"images/icon/nav/nav-30.svg",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/public.css",
+					"images/icon/nav/nav-33.svg",
+					"images/icon/nav/nav-43.svg",
+					"images/icon/nav/nav-48.svg"
 				],
 				"refer": [
 					"personal/person.html",
@@ -304,7 +311,9 @@
 					"order/my_order.html",
 					"yanchu/index.html",
 					"cake/index.html",
-					"movie/movie.html"
+					"movie/movie.html",
+					"syn_movie/movie.html",
+					"cake/list.html"
 				],
 				"priority": 0
 			},
@@ -375,7 +384,11 @@
 					"images/shouhuo.svg",
 					"js/jqueryExtend.js",
 					"images/icon/cake/nav-20.png",
-					"images/icon/cake/nav-19.png"
+					"images/icon/cake/nav-19.png",
+					"images/icon/nav/nav-43.svg",
+					"images/icon/nav/nav-33.svg",
+					"images/icon/nav/nav-48.svg",
+					"images/icon/nav/nav-30.svg"
 				],
 				"refer": [
 					"cake/list.html",
@@ -400,21 +413,38 @@
 					"js/jqueryExtend.js",
 					"fonts/iconfont.ttf"
 				],
-				"refer": [],
+				"refer": [
+					"cake/details.html"
+				],
 				"priority": 0
 			},
 			"cake/details.html": {
 				"resources": [
 					"js/fly.js",
-					"js/jquery.common.js"
+					"js/jquery.common.js",
+					"js/mui.mian.js",
+					"js/connection.js",
+					"css/mui.mian.css",
+					"js/mui.min.js",
+					"js/jquery-1.9.1.min.js",
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"css/public.css",
+					"js/jqueryExtend.js",
+					"fonts/mui.ttf",
+					"fonts/iconfont.ttf"
 				],
-				"refer": [],
+				"refer": [
+					"flow/checkout.html"
+				],
 				"priority": 0
 			},
 			"movie/movie.html": {
 				"resources": [
 					"images/star1.svg",
-					"images/star.svg"
+					"images/star.svg",
+					"css/mui.min.css",
+					"css/public.css"
 				],
 				"refer": [
 					"movie/movie_details.html"
@@ -456,12 +486,86 @@
 				],
 				"refer": [],
 				"priority": 0
+			},
+			"login-culture.html": {
+				"resources": [
+					"images/jy_index/top-logo.png",
+					"js/jquery-1.9.1.min.js",
+					"fonts/mui.ttf",
+					"css/jy_index.css",
+					"css/mui.min.css",
+					"css/public.css",
+					"images/jy_index/bg-wh.jpg"
+				],
+				"refer": [
+					"index/jy_index.html"
+				],
+				"priority": 0
+			},
+			"syn_movie/movie_details.html": {
+				"resources": [
+					"js/mui.mian.js",
+					"js/connection.js",
+					"js/mui.min.js",
+					"js/jquery-1.9.1.min.js",
+					"css/mui.min.css",
+					"css/public.css",
+					"js/template.js",
+					"js/jqueryExtend.js"
+				],
+				"refer": [
+					"syn_movie/cinema_select.html"
+				],
+				"priority": 0
+			},
+			"syn_movie/cinema_select.html": {
+				"resources": [
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"css/public.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"syn_movie/movie.html": {
+				"resources": [
+					"images/star1.svg",
+					"js/connection.js",
+					"js/mui.min.js",
+					"images/star.svg",
+					"js/jquery-1.9.1.min.js",
+					"css/mui.min.css",
+					"css/public.css",
+					"js/jqueryExtend.js"
+				],
+				"refer": [
+					"syn_movie/movie_details.html"
+				],
+				"priority": 0
+			},
+			"flow/checkout.html": {
+				"resources": [
+					"fonts/mui.ttf",
+					"js/mui.picker.min.js.js",
+					"css/public.css",
+					"js/jquery.common.js",
+					"css/mui-picker.min.css",
+					"js/connection.js",
+					"js/mui.mian.js",
+					"css/mui.mian.css",
+					"js/mui.min.js",
+					"js/baidumap.js",
+					"js/jquery-1.9.1.min.js",
+					"css/mui.min.css",
+					"js/jqueryExtend.js"
+				],
+				"refer": [],
+				"priority": 0
 			}
 		},
 		"idle": {
 			"resources": [
 				"images/jy_index/footer_nav1.png",
-				"images/icon/nav/nav-43.svg",
 				"tpl/sports/tmp_venue_order.html",
 				"js/movieSeat.js",
 				"order/order_venues.html",
@@ -520,7 +624,6 @@
 				"sports/sports_venue.html",
 				"images/sports/wangqiu.svg",
 				"images/jy_index/04.png",
-				"images/icon/nav/nav-33.svg",
 				"css/card.css",
 				"flow/code_pay.html",
 				"images/icon/nav/nav-41.svg",
@@ -564,7 +667,6 @@
 				"tpl/sports/tmp_venue_pay.html",
 				"js/mui.zoom.js",
 				"build/template.js",
-				"js/baidumap.js",
 				"sports/sport_venue_order.html",
 				"life/index.html",
 				"flow/pay.html",
@@ -575,7 +677,6 @@
 				"images/seat_3.png",
 				"sports/sport_venue_pay.html",
 				"tpl/sports/tmp_index.html",
-				"flow/checkout.html",
 				"movie_times/cinema.html",
 				"css/mui.css",
 				"tpl/sports/tmp_sports_venue.html",

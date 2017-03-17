@@ -49,7 +49,6 @@
 		<!--<script src="http://www.juyoufuli.com/tmodApp/template.js"></script>-->
 		<script src="../js/template.js"></script>
 		<script src="../js/mui.min.js"></script>
-		<!--<script src="../js/movieSeat.js"></script>-->
 		<script type="text/javascript">
 			var scheduleid=jQuery.getUrlParam('scheduleid');
 			jQuery.ajaxJsonp(api_url+'syn_cinema.php?step=cinemaSeats',{scheduleid:scheduleid},function(result){
@@ -68,7 +67,7 @@
 				}
 				//获取厅号
 				var ting=result.data.hall_name;
-			});
+			},true);
 			(function($) {
 				$.init();
 				//点击下一步进入订单详情页
@@ -97,7 +96,7 @@
 						}else if(result.state=='false'){
 							jQuery.errorJudge(result.data,result.message);
 						}
-					})
+					},true)
 				});
 
 			})(mui);

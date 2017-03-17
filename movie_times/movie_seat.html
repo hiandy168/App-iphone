@@ -53,7 +53,6 @@
 		<script src="http://www.juyoufuli.com/tmodApp/template.js"></script>
 		<script src="../js/mui.min.js"></script>
 		<script src="../js/mui.mian.js"></script>
-		<!--<script src="../js/movieSeat.js"></script>-->
 		<script type="text/javascript">
 			var hallno=jQuery.getUrlParam('hallno');
 			var planid=jQuery.getUrlParam('planid');
@@ -81,7 +80,7 @@
 				}
 				//获取厅号
 				var ting=result.data.hallName;
-			});
+			},true);
 			(function($) {
 				$.init();
 				//点击下一步进入订单详情页
@@ -110,7 +109,7 @@
 						}else if(result.state=='false'){
 							jQuery.errorJudge(result.data,result.message);
 						}
-					})
+					},true)
 				});
 
 			})(mui);
