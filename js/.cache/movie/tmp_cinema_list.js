@@ -1,4 +1,4 @@
-/*TMODJS:{"version":84,"md5":"76f98f19fecc7ffcb0d7c2b240562ce1"}*/
+/*TMODJS:{"version":86,"md5":"76f98f19fecc7ffcb0d7c2b240562ce1"}*/
 template('movie/tmp_cinema_list',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$each=$utils.$each,data=$data.data,value=$data.value,key=$data.key,$escape=$utils.$escape,val=$data.val,k=$data.k,is_mate=$data.is_mate,$out='';$out+='<ul class="mui-table-view mui-table-view-chevron"> ';

@@ -1,4 +1,4 @@
-/*TMODJS:{"version":27,"md5":"2dd82970ce2257e9142d742d1a2954be"}*/
+/*TMODJS:{"version":29,"md5":"2dd82970ce2257e9142d742d1a2954be"}*/
 template('ticket/ticket_submit',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,ProductName=$data.ProductName,SellPrice=$data.SellPrice,$out='';$out+='<div class="mui-content"> <ul class="mui-table-view margin_top_15"> <li class="mui-table-view-cell"><h4 class="mui-pull-left mui-col-xs-4">产品名称</h4><p class="mui-pull-right mui-col-xs-8 color_2fd0b5">';

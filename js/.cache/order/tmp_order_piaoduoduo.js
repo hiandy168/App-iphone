@@ -1,4 +1,4 @@
-/*TMODJS:{"version":17,"md5":"3e8d9f25f0470b0a47f34d886d83f01a"}*/
+/*TMODJS:{"version":19,"md5":"3e8d9f25f0470b0a47f34d886d83f01a"}*/
 template('order/tmp_order_piaoduoduo',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,data=$data.data,$each=$utils.$each,order=$data.order,$index=$data.$index,$escape=$utils.$escape,$out='';$out+='<div class="mui-content"> ';

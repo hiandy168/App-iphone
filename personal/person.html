@@ -65,7 +65,8 @@
 		<script src="../js/connection.js"></script>
 		<script src="../js/jquery-1.9.1.min.js"></script>
 		<script src="../js/jqueryExtend.js"></script>
-		<script src="http://www.juyoufuli.com/tmodApp/template.js"></script>
+		<!--<script src="http://www.juyoufuli.com/tmodApp/template.js"></script>-->
+		<script src="../js/template.js"></script>
 		<script src="../js/mui.min.js"></script>
 		<script src="../js/mui.view.js"></script>
 		<script src="../js/mui.picker.min.js.js"></script>
@@ -220,20 +221,6 @@
 					//				console.log(e.detail.page.id + ' back');
 				});
 			})(mui);
-			
-			
-		function plusReady(){
-			// 设置系统状态栏背景为蓝色
-			plus.navigator.setStatusBarBackground( "#2fd0b5" );
-			// 设置系统状态栏样式为浅色文字
-			plus.navigator.setStatusBarStyle( "UIStatusBarStyleBlackOpaque" );
-			}
-			if(window.plus){
-			plusReady();
-			}else{
-			document.addEventListener("plusready",plusReady,false);
-			}
-			
 			/*点击头像触发*/ 
         document.getElementById('headImage').addEventListener('tap', function() { 
             if (mui.os.plus) { 

@@ -1,4 +1,4 @@
-/*TMODJS:{"version":115,"md5":"e0e2669947fd4ea7a9ede2a79218be97"}*/
+/*TMODJS:{"version":117,"md5":"e0e2669947fd4ea7a9ede2a79218be97"}*/
 template('cake/detail',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,data=$data.data,$each=$utils.$each,$value=$data.$value,$index=$data.$index,$escape=$utils.$escape,spec=$data.spec,propertie=$data.propertie,value=$data.value,$string=$utils.$string,$out='';$out+=' <nav class="mui-bar mui-bar-tab mui-row"> ';

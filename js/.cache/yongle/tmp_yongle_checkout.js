@@ -1,4 +1,4 @@
-/*TMODJS:{"version":19,"md5":"69d9fce2ef47960dac50b38ea295d9fc"}*/
+/*TMODJS:{"version":21,"md5":"69d9fce2ef47960dac50b38ea295d9fc"}*/
 template('yongle/tmp_yongle_checkout',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,yongle=$data.yongle,checkconsignee=$data.checkconsignee,consignee=$data.consignee,$out='';$out+='<nav class="mui-bar mui-bar-tab mui-row"> <div class="mui-col-xs-7"><a class="mui-tab-item">订单总额：<span class="color_2fd0b5">';

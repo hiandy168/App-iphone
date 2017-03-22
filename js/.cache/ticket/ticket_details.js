@@ -1,4 +1,4 @@
-/*TMODJS:{"version":26,"md5":"393e80899a555a229aedee32d22d2895"}*/
+/*TMODJS:{"version":28,"md5":"393e80899a555a229aedee32d22d2895"}*/
 template('ticket/ticket_details',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$each=$utils.$each,data=$data.data,img=$data.img,$index=$data.$index,$escape=$utils.$escape,i=$data.i,item=$data.item,$string=$utils.$string,$out='';$out+='<div class="mui-content"> <div id="slider" class="mui-slider"> <div class="mui-slider-group"> ';

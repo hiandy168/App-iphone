@@ -1,4 +1,4 @@
-/*TMODJS:{"version":28,"md5":"729f54ae72f433110b72a48e803634c2"}*/
+/*TMODJS:{"version":30,"md5":"729f54ae72f433110b72a48e803634c2"}*/
 template('yongle/tmp_yongle_list',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$each=$utils.$each,list=$data.list,val=$data.val,k=$data.k,$escape=$utils.$escape,cateid=$data.cateid,$out='';$out+=' ';

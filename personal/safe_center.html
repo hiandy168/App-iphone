@@ -233,7 +233,7 @@
                 var answertwo = jQuery('input[name="answertwo"]').val();
                 var answerthree = jQuery('input[name="answerthree"]').val();
                 if(answertwo==''||answerone==''||answerthree==''){
-                    mui.alert('答案不能为空！');
+//                  mui.alert('答案不能为空！');
                     return false;
                 }
                 jQuery.ajaxJsonp(web_url+'/jyflapi/index.php?s=Users/UserJsonp/editLoginQues',{

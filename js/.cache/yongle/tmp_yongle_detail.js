@@ -1,4 +1,4 @@
-/*TMODJS:{"version":23,"md5":"92cdeaf47a8bd55aad66d4c84031a693"}*/
+/*TMODJS:{"version":25,"md5":"92cdeaf47a8bd55aad66d4c84031a693"}*/
 template('yongle/tmp_yongle_detail',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,product=$data.product,$each=$utils.$each,iteminfo=$data.iteminfo,time=$data.time,key=$data.key,val=$data.val,k=$data.k,$string=$utils.$string,$out='';$out+='<div id="yuanchu_detail" class="mui-content"> <ul class="mui-table-view yanchu_list yanchu_details_top" style="background-image: url(';

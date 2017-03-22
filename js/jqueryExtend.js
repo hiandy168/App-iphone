@@ -9,44 +9,33 @@
         * @param prev  执行ajax前调用函数
         * @param after  执行ajax完成时调用函数
         */
-       ajaxJsonp:function(u,d,b,isload,prev,after){
-           var defaults = {
-               url:u||'',
-               data:d||'',
-               success:function(){
-                   $.noop();
-               }
-           }
-           isload = isload?true:false;
-           prev = (typeof prev === "function")?prev:function(){
-               var html ='<div id="mui-loading-box" class="mui-scroll"><div class="mui-loading"><div class="mui-spinner"></div>正在加载</div></div>';
-               $('body').append(html);
-           }
-           after = (typeof after === "function")?after:function(){
-               $('#mui-loading-box').remove();
-           }
-           defaults.success=b;   
-           if(isload || !mui.os.plus){
-                prev();
-           }
-           $.ajax({
-               url:defaults.url,
-               type:'get',
-               data:defaults.data,
-               dataType:'json',
-               cache:false,
-               success:function(result){
-                   defaults.success(result);
-                   if(isload || !mui.os.plus){
-                       after();
-                   }
-               },
-               error:function(){
-               	after();
-               	mui.alert("响应超时")
-               }
-           })
-       },
+       ajaxJsonp: function(url, datas, loding) {
+			mui.ajax(url, {
+				data: datas,
+				dataType: 'json', //服务器返回json格式数据
+				type: 'get', //HTTP请求类型
+				timeout: 5000, //超时时间设置为5秒；
+				beforeSend: function() {
+					if (loding) {
+						plus.nativeUI.showWaiting(title, options);
+					}
+				},
+				complete: function() {
+					if (loding) {
+						plus.nativeUI.closeWaiting();
+					}
+				},
+				success: function(data) {
+					
+				},
+				error: function(xhr, type, errorThrown) {
+					//异常处理；
+					plus.nativeUI.toast("网络错误");
+					console.log(type);
+					return 0;
+				}
+			});
+		}
        /**
         * 获取Url中params
         * @param name   参数名称
