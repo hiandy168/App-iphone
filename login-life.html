@@ -11,6 +11,8 @@
 			header{background:transparent!important;}
 			.mui-bar-nav{box-shadow: none;}
 			.login-shenghuo.mui-content{padding-top: 0!important;position: absolute;width: 100%;height: 100%;}
+			.card_num{transition: visibility .5s ease-in;}
+			.card_num.active{visibility: visible!important;}
 		</style>
 	</head>
 
@@ -34,20 +36,20 @@
 		                	<label class="login-title">密码</label>
 		                    <input type="password" name="password" placeholder="请输入密码"/>
 		                </div>
-						<div class="card_num">
-							<label class="login-title">卡序号</label>
-							<input type="number" name="sequence" placeholder="请输入卡序号"/>
-						</div>
 						<div class="login_code">
 							<label class="login-title">验证码</label>
 							<input type="text" name="captcha" placeholder="请输入验证码"/>
 							<img src="" alt="点击刷新" class="code-img" />
 						</div>
+						<div class="card_num" style="visibility: visible;">
+							<label class="login-title">卡序号</label>
+							<input type="number" name="sequence" placeholder="请输入卡序号"/>
+						</div>
 		                <input type="hidden" name="type" value="3"/>
 		                <button class="login_btn">登 录</button>
 		            </form>
 		    </div>
-</div>
+		</div>
 		</div>
 		<script src="js/jquery-1.9.1.min.js"></script>
 		<script src="js/connection.js"></script>
@@ -55,33 +57,40 @@
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init();
+			//本地存储uuid
+			localStorage.setItem("uuid", plus.device.uuid);
 			jQuery('.code-img').attr("src",web_url+'/mobile/captcha.php?'+Math.random());
 			jQuery('.code-img').on('click',function(){
 				$(this).attr("src",web_url+'/mobile/captcha.php?'+Math.random());
 			});
 			jQuery('input[name="username"]').val(localStorage.user_name);
 			mui('body').on("tap",".login_btn",function () {
+				var uuid=localStorage.getItem("uuid");
+				var username = jQuery("input[name='username']").val();
+				var password = jQuery("input[name='password']").val();
+				var sequence = jQuery("input[name='sequence']").val();
+				var captcha = jQuery("input[name='captcha']").val();
+				var type = jQuery("input[name='type']").val();
 				document.activeElement.blur();
-				var form = jQuery(this).parent("form");
-				var username = form.find("input[name='username']").val();
-				var password = form.find("input[name='password']").val();
-				var sequence = form.find("input[name='sequence']").val();
-				var captcha = form.find("input[name='captcha']").val();
-				var type = form.find("input[name='type']").val();
-				jQuery.ajaxJsonp(web_url + '/mobile/userAuth.php?act=actLogin',{username: username, password: password,sequence: sequence,captcha: captcha, type: type,source:1},function (result) {
-					console.log(result);
-					if (result.state == "true") {
+			//uuid验证登录
+			jQuery.ajaxJsonp(web_url + '/mobile/userAuth.php?act=actAppLogin',{username: username, password: password,sequence: sequence,captcha: captcha, type: type,source:1,appuuid:uuid},function (result) {
+							if (result.state == "true") {
 								localStorage.user_id = result.data.user_id;
 								localStorage.user_name = result.data.user_name;
 								mui.openWindow({
-									url:'./index/jy_index.html',
+									url:'/index/jy_index.html',
 									id :'/index/jy_index.html'
 								})
-							} else {
-								mui.alert(result.message);
+							} else if(result.state==2){
+								jQuery(".card_num").addClass("active");
+								mui.toast(result.message);
 							}
-					},true 
+							else{
+								mui.toast(result.message);
+							}
+						},true
 				)
+
 			})
 		</script>
 	</body>

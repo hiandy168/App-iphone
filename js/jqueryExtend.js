@@ -1,23 +1,27 @@
 (function($){
    $.extend({
        /**
-        * 封装jquery jsonp操作，
-        * @param u  url
-        * @param d  data参数
-        * @param b  回调函数
-        * @param isload  判断是否使用动画默认false
-        * @param prev  执行ajax前调用函数
-        * @param after  执行ajax完成时调用函数
+        * 封装mui ajax操作，
+        * @param url  url
+        * @param datas  data参数
+        * @param callback  回调函数
+        * @param loding  是否使用动画默认false
         */
-       ajaxJsonp: function(url, datas, loding) {
+       ajaxJsonp: function(url, datas,callback,loding) {
+       		var onSuccess=function(){};
+       		onSuccess=callback;
 			mui.ajax(url, {
 				data: datas,
 				dataType: 'json', //服务器返回json格式数据
 				type: 'get', //HTTP请求类型
-				timeout: 5000, //超时时间设置为5秒；
+				timeout: 30000, //超时时间设置为5秒；
 				beforeSend: function() {
 					if (loding) {
-						plus.nativeUI.showWaiting(title, options);
+						plus.nativeUI.showWaiting("处理中，请稍等...",{
+//							loading:{icon:"/images/test.png"},
+//							background:"rgba(0,0,0,0)",
+							padlock: true
+							});
 					}
 				},
 				complete: function() {
@@ -26,7 +30,7 @@
 					}
 				},
 				success: function(data) {
-					
+					onSuccess(data);
 				},
 				error: function(xhr, type, errorThrown) {
 					//异常处理；
@@ -35,7 +39,7 @@
 					return 0;
 				}
 			});
-		}
+		},
        /**
         * 获取Url中params
         * @param name   参数名称
