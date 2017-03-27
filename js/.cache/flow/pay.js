@@ -1,4 +1,4 @@
-/*TMODJS:{"version":146,"md5":"b1023224cb6023f3c699e5544f864bdd"}*/
+/*TMODJS:{"version":147,"md5":"b1023224cb6023f3c699e5544f864bdd"}*/
 template('flow/pay',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,data=$data.data,$out='';$out+=' <nav class="mui-bar mui-bar-tab mui-row"> <div class="mui-col-xs-7"><a class="mui-tab-item">合计：<span class="color_2fd0b5">';

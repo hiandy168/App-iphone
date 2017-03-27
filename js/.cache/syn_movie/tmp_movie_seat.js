@@ -1,4 +1,4 @@
-/*TMODJS:{"version":3,"md5":"7be57d93bc25420e6078a517438b59a1"}*/
+/*TMODJS:{"version":4,"md5":"7be57d93bc25420e6078a517438b59a1"}*/
 template('syn_movie/tmp_movie_seat',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,cinema=$data.cinema,featureTimeStr=$data.featureTimeStr,language=$data.language,screen_type=$data.screen_type,price=$data.price,scheduleid=$data.scheduleid,movie=$data.movie,movie_id=$data.movie_id,extInfo=$data.extInfo,$out='';$out+='<div class="mui-row movie_details1_top bg_white"> <div class="mui-col-xs-9"> <h4 class="mui-ellipsis">';

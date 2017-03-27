@@ -1,4 +1,4 @@
-/*TMODJS:{"version":96,"md5":"3c99321918475a3f824aab20f62f4460"}*/
+/*TMODJS:{"version":97,"md5":"3c99321918475a3f824aab20f62f4460"}*/
 template('order/tmp_order_venues',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,hasOrders=$data.hasOrders,$each=$utils.$each,orders=$data.orders,order=$data.order,key=$data.key,$escape=$utils.$escape,time=$data.time,$index=$data.$index,$string=$utils.$string,$out='';$out+='<div class="mui-content"> ';

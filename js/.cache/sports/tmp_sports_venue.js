@@ -1,4 +1,4 @@
-/*TMODJS:{"version":106,"md5":"ce586f85b6a1656a5eaf01bdde8756d3"}*/
+/*TMODJS:{"version":107,"md5":"ce586f85b6a1656a5eaf01bdde8756d3"}*/
 template('sports/tmp_sports_venue',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$each=$utils.$each,venues=$data.venues,venue=$data.venue,$index=$data.$index,$escape=$utils.$escape,venueId=$data.venueId,priceData=$data.priceData,price=$data.price,date=$data.date,list=$data.list,timeData=$data.timeData,time=$data.time,infoId=$data.infoId,secret=$data.secret,$out='';$out+='<div class="mui-content"> <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted sports_venue_scroll margin_top_15 bg_white"> <div class="mui-scroll"> ';

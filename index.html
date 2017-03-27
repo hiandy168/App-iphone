@@ -60,13 +60,14 @@
 </div>
 
 <script>
+	mui.init();
 	jQuery.hrefClick();
     jQuery( function () {
         if(localStorage.user_id != undefined&&localStorage.user_id!=''){
             jQuery.ajaxJsonp(web_url + '/mobile/userAuth.php?act=checkLogin',{userid:localStorage.user_id},function(result){
                 if(result.state=='true'){
                     mui.openWindow({
-                    	url:'./index/jy_index.html',
+                    	url:'/index/jy_index.html',
                     	id :'/index/jy_index.html'
                     });
                     return false;
@@ -76,7 +77,6 @@
             });
         }
     });
-    mui.init();
 	if(mui.os.plus){
 		document.addEventListener('refresh',function(){
 			plus.webview.currentWebview().reload();

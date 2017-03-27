@@ -1,13 +1,13 @@
-/*TMODJS:{"version":28,"md5":"2df5007c2a054f7fd64bda8d4984a5a9"}*/
+/*TMODJS:{"version":30,"md5":"2104dea23bd5d8b7c8e95c86bd4111d3"}*/
 template('cate/detail',function($data,$filename
 /**/) {
-'use strict';var $utils=this,$helpers=$utils.$helpers,data=$data.data,$each=$utils.$each,$value=$data.$value,$index=$data.$index,$escape=$utils.$escape,$string=$utils.$string,$out='';$out+=' <nav class="mui-bar mui-bar-tab mui-row"> <div class="mui-col-xs-5"> <a class="mui-tab-item border_right_ddd jump-home" href="#"> <span class="mui-icon mui-icon-home"></span> <span class="mui-tab-label">首页</span> </a> <a class="mui-tab-item border_right_ddd jump-cart" href="#"> <span class="mui-icon iconfont icon-gouwuche"></span> <span class="mui-tab-label">购物车</span> <span class="mui-badge mui-badge-danger buy_car_count">0</span> </a>  </div> <div class="mui-col-xs-7"> <a class="mui-tab-item footer_liji act-done" href="#"> <span class="mui-tab-label">立即结算</span> </a> <a class="mui-tab-item footer_jiaru act-cart" href="#"> <span class="mui-tab-label">加入购物车</span> </a> </div> </nav>  <div class="mui-content"> ';
+'use strict';var $utils=this,$helpers=$utils.$helpers,data=$data.data,$each=$utils.$each,$value=$data.$value,$index=$data.$index,$escape=$utils.$escape,$string=$utils.$string,$out='';$out+=' <nav class="mui-bar mui-bar-tab mui-row"> <div class="mui-col-xs-5"> <a class="mui-tab-item border_right_ddd jump-home" href="#"> <span class="mui-icon mui-icon-home"></span> <span class="mui-tab-label">首页</span> </a> <a class="mui-tab-item border_right_ddd jump-cart" href="#"> <span class="mui-icon iconfont icon-gouwuche"></span> <span class="mui-tab-label">购物车</span> <span class="mui-badge mui-badge-danger buy_car_count">0</span> </a> </div> <div class="mui-col-xs-7"> <a class="mui-tab-item footer_liji act-done" href="#"> <span class="mui-tab-label">立即结算</span> </a> <a class="mui-tab-item footer_jiaru act-cart" href="#"> <span class="mui-tab-label">加入购物车</span> </a> </div> </nav>  <div class="mui-content"> ';
 if(data){
 $out+=' <div id="slider" class="mui-slider"> <div class="mui-slider-group"> ';
 $each(data.detail.commodityPicList,function($value,$index){
 $out+=' <div class="mui-slider-item"> <a href="#"> <img src="';
 $out+=$escape($value.picUrl);
-$out+='"> </a> </div> ';
+$out+='" height="300"> </a> </div> ';
 });
 $out+=' </div> <div class="mui-slider-indicator"> ';
 $each(data.detail.commodityPicList,function($value,$index){

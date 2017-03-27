@@ -1,4 +1,4 @@
-/*TMODJS:{"version":27,"md5":"10a17b2330de1277dea3c12016b138b5"}*/
+/*TMODJS:{"version":28,"md5":"10a17b2330de1277dea3c12016b138b5"}*/
 template('cate/list',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,data=$data.data,$each=$utils.$each,navigator=$data.navigator,$index=$data.$index,$escape=$utils.$escape,$out='';$out+='  ';

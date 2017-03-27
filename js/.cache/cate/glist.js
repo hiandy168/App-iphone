@@ -1,4 +1,4 @@
-/*TMODJS:{"version":27,"md5":"04dd95f709cebfbc57aa48929b5dd56d"}*/
+/*TMODJS:{"version":28,"md5":"04dd95f709cebfbc57aa48929b5dd56d"}*/
 template('cate/glist',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$each=$utils.$each,data=$data.data,list=$data.list,$index=$data.$index,$escape=$utils.$escape,$out='';$out+=' ';

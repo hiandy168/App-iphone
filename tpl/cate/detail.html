@@ -10,10 +10,6 @@
 			<span class="mui-tab-label">购物车</span>
 			<span class="mui-badge mui-badge-danger buy_car_count">0</span>
 		</a>
-		<!--<a class="mui-tab-item" href="#">
-			<span class="mui-icon mui-icon-contact"></span>
-			<span class="mui-tab-label">我的</span>
-		</a>-->
 	</div>
 	<div class="mui-col-xs-7">
 		<a class="mui-tab-item footer_liji act-done" href="#">
@@ -33,7 +29,7 @@
 			{{each data.detail.commodityPicList}}
 			<div class="mui-slider-item">
 				<a href="#">
-					<img src="{{$value.picUrl}}">
+					<img src="{{$value.picUrl}}" height="300">
 				</a>
 			</div>
 			{{/each}}

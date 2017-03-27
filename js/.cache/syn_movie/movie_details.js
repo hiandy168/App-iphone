@@ -1,4 +1,4 @@
-/*TMODJS:{"version":3,"md5":"b6ca52bc83b08c7b4b015b133ab6209c"}*/
+/*TMODJS:{"version":4,"md5":"b6ca52bc83b08c7b4b015b133ab6209c"}*/
 template('syn_movie/movie_details',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,data=$data.data,$out='';$out+='<nav class="mui-bar mui-bar-tab movie_details_btn href_click" data-href="./cinema_select.html?movieid=';

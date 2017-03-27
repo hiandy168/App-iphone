@@ -1,4 +1,4 @@
-/*TMODJS:{"version":31,"md5":"a4b87fe442c94e4f3f126a73eef13537"}*/
+/*TMODJS:{"version":32,"md5":"a4b87fe442c94e4f3f126a73eef13537"}*/
 template('ticket/pullrefresh_sub',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$each=$utils.$each,data=$data.data,item=$data.item,$index=$data.$index,$escape=$utils.$escape,$out='';$each(data.data,function(item,$index){

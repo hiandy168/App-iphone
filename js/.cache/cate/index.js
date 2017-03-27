@@ -1,4 +1,4 @@
-/*TMODJS:{"version":27,"md5":"f9bbac68a1df9b1ac8da334889a853c2"}*/
+/*TMODJS:{"version":28,"md5":"f9bbac68a1df9b1ac8da334889a853c2"}*/
 template('cate/index',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$each=$utils.$each,data=$data.data,banner=$data.banner,$index=$data.$index,$escape=$utils.$escape,i=$data.i,cate=$data.cate,attr=$data.attr,good=$data.good,$out='';$out+='<div class="mui-content">  <div id="slider" class="mui-slider" > <div class="mui-slider-group mui-slider-loop"> <div class="mui-slider-item mui-slider-item-duplicate slide-a"> <a href=""> <img src=""> </a> </div> ';

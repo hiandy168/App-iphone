@@ -1,4 +1,4 @@
-/*TMODJS:{"version":53,"md5":"797f762d6b78d29c054d6bf9b29d6f3f"}*/
+/*TMODJS:{"version":54,"md5":"797f762d6b78d29c054d6bf9b29d6f3f"}*/
 template('movie_times/tmp_cinema_list',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$each=$utils.$each,data=$data.data,value=$data.value,key=$data.key,$escape=$utils.$escape,val=$data.val,k=$data.k,is_mate=$data.is_mate,is_brush=$data.is_brush,$out='';$out+='<ul class="mui-table-view mui-table-view-chevron"> ';

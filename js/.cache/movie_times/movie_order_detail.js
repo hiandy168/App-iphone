@@ -1,4 +1,4 @@
-/*TMODJS:{"version":53,"md5":"85a916d1d9b0f7d3e27d25eadeb22c78"}*/
+/*TMODJS:{"version":54,"md5":"85a916d1d9b0f7d3e27d25eadeb22c78"}*/
 template('movie_times/movie_order_detail',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,cinema_name=$data.cinema_name,movie_name=$data.movie_name,featuretime=$data.featuretime,language=$data.language,screen_type=$data.screen_type,hall_name=$data.hall_name,seat_info=$data.seat_info,mobile=$data.mobile,count=$data.count,diff_price=$data.diff_price,id=$data.id,user_name=$data.user_name,$out='';$out+='<div id="movie_order_detail"> <div class="mui-row mui-text-center color_ff781e remainder_time"> <span class="pay_time_icon"></span>支付剩余时间：<span id="times"></span> </div> <ul class="mui-table-view margin_top_15"> <li class="mui-table-view-cell"><h4 class="mui-pull-left">影院</h4><p class="mui-pull-right">';

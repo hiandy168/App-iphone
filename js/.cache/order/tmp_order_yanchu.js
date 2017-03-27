@@ -1,4 +1,4 @@
-/*TMODJS:{"version":95,"md5":"aa153817f49e2de8da58446f8920ab94"}*/
+/*TMODJS:{"version":96,"md5":"aa153817f49e2de8da58446f8920ab94"}*/
 template('order/tmp_order_yanchu',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,hasOrders=$data.hasOrders,$each=$utils.$each,orders=$data.orders,order=$data.order,key=$data.key,$escape=$utils.$escape,$out='';$out+='<div class="mui-content"> ';
