@@ -1,4 +1,4 @@
-/*TMODJS:{"version":80,"md5":"92bae7a3ec740d4dbf03dbd500dd1131"}*/
+/*TMODJS:{"version":81,"md5":"92bae7a3ec740d4dbf03dbd500dd1131"}*/
 template('movie/movie_order_detail',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,money=$data.money,cinema_name=$data.cinema_name,movie_name=$data.movie_name,featuretime=$data.featuretime,language=$data.language,screen_type=$data.screen_type,hall_name=$data.hall_name,seat_info=$data.seat_info,mobile=$data.mobile,user_name=$data.user_name,id=$data.id,$out='';$out+='<div class="mui-row mui-text-center color_ff781e remainder_time"> <span class="pay_time_icon"></span>支付剩余时间：<span id="times"></span> </div> <ul class="mui-table-view margin_top_15"> <li class="mui-table-view-cell"><h4 class="mui-pull-left">总价</h4><p class="mui-pull-right">';

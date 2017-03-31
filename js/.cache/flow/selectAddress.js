@@ -1,4 +1,4 @@
-/*TMODJS:{"version":118,"md5":"991370187788b8f82f58c2190b3b15a2"}*/
+/*TMODJS:{"version":119,"md5":"991370187788b8f82f58c2190b3b15a2"}*/
 template('flow/selectAddress',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,data=$data.data,$each=$utils.$each,row=$data.row,$index=$data.$index,$escape=$utils.$escape,$out='';$out+='<div class="adress_select_title"><h4 class="mui-text-center">配送地址</h4></div> <ul id="OA_task_2" class="mui-table-view"> ';

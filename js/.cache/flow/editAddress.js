@@ -1,4 +1,4 @@
-/*TMODJS:{"version":134,"md5":"0dbc994745e9588582c0d4040c1ea454"}*/
+/*TMODJS:{"version":135,"md5":"0dbc994745e9588582c0d4040c1ea454"}*/
 template('flow/editAddress',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,data=$data.data,$out='';$out+='<div class="mui-content"> <div class="mui-page-content"> <div class="mui-input-group margin_top_20"> <div class="mui-input-row"> <label>收货人姓名</label> <input type="text" id="consignee" name="consignee" class="mui-input-clear" value="';

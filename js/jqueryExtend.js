@@ -19,7 +19,7 @@
 					if (loding) {
 						plus.nativeUI.showWaiting("处理中，请稍等...",{
 //							loading:{icon:"/images/test.png"},
-//							background:"rgba(0,0,0,0)",
+							background:"rgba(0,0,0,.5)",
 							padlock: true
 							});
 					}

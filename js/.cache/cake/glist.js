@@ -1,4 +1,4 @@
-/*TMODJS:{"version":101,"md5":"932f8e0becbe64fbf0abf659612d9c2a"}*/
+/*TMODJS:{"version":102,"md5":"932f8e0becbe64fbf0abf659612d9c2a"}*/
 template('cake/glist',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$each=$utils.$each,data=$data.data,list=$data.list,$index=$data.$index,$escape=$utils.$escape,$out='';$out+='<ul class="mui-table-view"> ';

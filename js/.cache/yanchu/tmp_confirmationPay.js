@@ -1,4 +1,4 @@
-/*TMODJS:{"version":113,"md5":"e8e508987a43cf7abafbb0f1e58c92ee"}*/
+/*TMODJS:{"version":114,"md5":"e8e508987a43cf7abafbb0f1e58c92ee"}*/
 template('yanchu/tmp_confirmationPay',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,order_amount=$data.order_amount,order_sn=$data.order_sn,number=$data.number,goods_amount=$data.goods_amount,shipping_fee=$data.shipping_fee,user_name=$data.user_name,order_id=$data.order_id,$out='';$out+='<nav class="mui-bar mui-bar-tab mui-row"> <div class="mui-col-xs-7"><a class="mui-tab-item">应付总额：<span class="color_2fd0b5">';

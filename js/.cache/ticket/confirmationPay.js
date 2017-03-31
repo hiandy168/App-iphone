@@ -1,4 +1,4 @@
-/*TMODJS:{"version":29,"md5":"27449ed06f347b413f8cc49fc389ee34"}*/
+/*TMODJS:{"version":30,"md5":"27449ed06f347b413f8cc49fc389ee34"}*/
 template('ticket/confirmationPay',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,SellPrice=$data.SellPrice,order_sn=$data.order_sn,ProductName=$data.ProductName,TripDate=$data.TripDate,card_num=$data.card_num,MobileNumberToGetEticket=$data.MobileNumberToGetEticket,user_name=$data.user_name,$out='';$out+='<div class="mui-content"> <div class="mui-row mui-text-center color_ff781e remainder_time">订单已提交成功，共计';

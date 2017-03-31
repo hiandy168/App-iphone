@@ -1,4 +1,4 @@
-/*TMODJS:{"version":63,"md5":"b7b4c87e1f1d4df407fae0e917eb1f0f"}*/
+/*TMODJS:{"version":64,"md5":"b7b4c87e1f1d4df407fae0e917eb1f0f"}*/
 template('movie/cinema_select',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$each=$utils.$each,data=$data.data,cinema=$data.cinema,$index=$data.$index,$escape=$utils.$escape,ticketType=$data.ticketType,$out='';$each(data.cinemas,function(cinema,$index){
